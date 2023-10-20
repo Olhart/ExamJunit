@@ -36,12 +36,11 @@ public class TaskCreateWindowSteps extends TaskCreateWindowElements {
         attachElemScreenshotPNG(taskFrame);
     }
 
-    @Step("Ввести тег(и) \"{tag}\"")
     private static void setTags(String tag) {
         tagsInput.sendKeys(tag + " ");
     }
 
-
+    @Step("Ввести тег(и) \"{tag}\"")
     private static void setTags(String[] tags) {
         tagsInput.shouldBe(Condition.enabled).click();
         for (String tag : tags) {
@@ -53,13 +52,11 @@ public class TaskCreateWindowSteps extends TaskCreateWindowElements {
     @Step("Выбрать Исправить в версиях \"Version2.0\"")
     private static void clickFixVersionAsVersion_2_0() {
         fixVersionsOptVersion_2_0.shouldBe(Condition.visible).click();
-        attachElemScreenshotPNG(taskFrame);
     }
 
     @Step("Выбрать Затронуты версии \"Version2.0\"")
     private static void clickAffectedVersionAsVersion_2_0() {
         affectedVersionsOptVersion_2_0.shouldBe(Condition.visible).click();
-        attachElemScreenshotPNG(taskFrame);
     }
 
     @Step("Ввести название задачи {topicName}")
@@ -83,13 +80,11 @@ public class TaskCreateWindowSteps extends TaskCreateWindowElements {
     @Step("Исполнителем выбрать себя")
     private static void clickAssignMeAsAssignee() {
         assignMeButton.shouldBe(Condition.enabled).click();
-        attachElemScreenshotPNG(taskFrame);
     }
 
     @Step("Нажать кнопку \"Создать\"")
     public static void clickSubmit() {
         submitInput.shouldBe(Condition.enabled).click();
-        attachScreenshotPNG();
     }
 
     @Step("Заполнить форму создания задачи")
