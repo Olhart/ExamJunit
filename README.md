@@ -18,3 +18,13 @@
 ```
 $ mvn test
 ```
+## Предупреждение:
+Тесты запускались на Java версии 19. Версия maven-surefire-plugin в pom.xml была изменена на "2.22.0".
+Первоначальный фрагмент pom.xml для Java 8 (в случии ошибки при сборке проекта):
+```
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>2.20/version>
+  ...
+```
